@@ -1,0 +1,28 @@
+<html>
+<title>Calcular valores</title>
+<P>|
+<p>|
+____________________________________________________
+<p>
+x1: <input id="x1" cols="50" row="1"></input>
+ y1: <input id="y1" cols="50" row="1"></input> 
+<p>x2: <input id="x2" cols="50" row="1"></input> y2: <input id="y2" cols="50" row="1"></input>
+<p>Entrada <input id="en" cols="50" row="1"></input> 
+<button type="button" onclick="calcular()" id="a">Calcular</button>
+<p> RESULTADO <textarea id="res" cols="50" row="1"></textarea>
+<script>
+function calcular()
+{
+	var m,xu,xd,yu,yd,x;
+	xu=Number(x1.value);
+	xd=Number(x2.value);
+	yu=Number(y1.value);
+	x=Number(en.value);
+	yd=Number(y2.value);
+	m=(yd-yu)/(xd-xu);
+	res.value=m*(x-xu)+yu;
+	
+
+}
+</script> 
+</html>

@@ -1,0 +1,42 @@
+<html>
+<script src="plot.js"></script>
+<script>
+////////////////////////////
+
+var a,b;
+var inicio,inter,final;
+			inicio	=-2.000;
+			final 	=2.000;
+			inter 	=0.1;
+n=Math.round((final-inicio)/inter);
+a = Array(n);
+b = Array (n);	
+////////////////////////////
+
+function quadrado(d1,e1)
+{
+	var p,i;
+	i=0;
+	p=inicio;
+	for(i=0;i<=n;i++)
+	{
+		d1[i]= p;
+		e1[i]= Math.sqrt(4-p*p);
+				if(isNaN(d1[i]) || isNaN(e1[i]))
+				{d1[i]=d1[0];
+				 e1[i]=e1[0];}
+		p=p+inter;
+	}
+}
+
+iniciar();
+quadrado(a,b);
+pontos(a,b,"blue");
+tracos(a,b);
+titulo("Gráfico");
+legendax("X");
+legenday("Y");
+fim();
+////////////////////////////
+</script>
+</html>

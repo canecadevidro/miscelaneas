@@ -1,0 +1,72 @@
+<html>
+<script src="plot.js"></script>
+<script>
+/*////////////////////////////
+
+var a,b;
+var inicio,inter,final;
+			inicio	=1;
+			final 	=10;
+			inter 	=0.1;
+n=Math.round((final-inicio)/inter);
+a = Array(n);
+b = Array (n);	
+//////////////////////////*/
+larg = 950;
+alt=550;
+function quadrado(d1,e1)
+{
+	var p,i;
+	i=0;
+	p=inicio
+	for (i=0;i<=n;i++){
+
+	d1[i]= p;
+	e1[i]=Math.log(p);
+	
+	p =p+inter;
+	}
+}
+
+iniciar();
+
+var x,y,n,i,d,yl;
+n=1750	;
+d=0.01;
+x = Array(n);
+y= Array (n);
+yl =Array(n);
+x[0]=0;
+y[0]=0;
+yl[0]=1;
+
+//y''+2y'+2y=0
+//r =-1+-i	
+	//y = [C1*sen(x)+cos(x)]/e^x
+//C2=1
+//
+//y=e^x+xe^x
+
+
+function yll(c,d,dd)
+{
+ return (-d+c);
+}
+function fyl(a,b)
+{ return b; }
+for (i=1;i<=n;i++)
+{
+	yl[i] = yl[i-1]+d*yll(yl[i-1],y[i-1],x[i-1]);
+	y[i] = y[i-1]+d*yl[i-1];	//fyl(x[i-1],y[i-1]);
+	x[i]=x[i-1]+d;}
+
+
+pontos(x,y,"red");
+tracos(x,y);
+titulo("Grafico");
+legendax("X");
+legenday("Y");
+fim();
+////////////////////////////
+</script>
+</html>

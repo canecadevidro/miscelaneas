@@ -1,0 +1,29 @@
+<html>
+<title>Integração</title>
+<script>
+var n,i, j;
+n=10000;
+function quad(x,y)
+{
+	return x*x+y*y; //integral x^3*y/3 + y^3*x/3 (1,1) => 2/3
+}
+
+	function itgr (a,b,c,d)
+{	var soma,dx,dy;
+	dx = (b-a)/n;
+	dy= (d-c)/n;
+	i=a;	
+	j=c;
+	soma=0;
+	while (j<=d){
+		while (i<=b)
+		{soma=soma+ quad(i,j)*dx*dy;
+		 i=i+dx;
+		}
+	j=j+dy;}
+	return soma;
+
+}
+
+</script>
+</html>

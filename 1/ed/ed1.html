@@ -1,0 +1,69 @@
+<html>
+<script src="e.js"></script>
+<script>
+
+var x,y,n,i,d,yl;
+n=100000;
+d=0.02;
+x = Array(n);
+y= Array (n);
+yl =Array(n);
+x[0]=0;
+y[0]=1;
+yl[0]=2;
+
+//y''+2y'+2y=0
+//r =-1+-i	
+	//y = [C1*sen(x)+cos(x)]/e^x
+//C2=1
+//
+//y=e^x+xe^x
+
+
+function yll(c,d)
+{
+ return (-2*c-2*d);
+}
+function fyl(a,b)
+{ return b; }
+for (i=1;i<n;i++)
+{
+	yl[i] = yl[i-1]+d*yll(yl[i-1],y[i-1]);
+	y[i] = y[i-1]+d*yl[i-1];	//fyl(x[i-1],y[i-1]);
+	x[i]=x[i-1]+d;
+	/*if (Math.abs(x[i]-xo)==0);
+	{
+		document.write(y[i]);
+		break;
+	}*/		
+}
+/*for (i=0;i<n;i++)
+{
+
+document.write(x[i],"\t",y[i]);
+}
+*/
+
+
+
+////////////////////////////
+n=100000;
+alt=700;
+larg=700;
+mesq=40;
+mdir=40;
+mc=50;
+mb=50;
+////////////////////////////
+iniciar();
+pontos(x,y);
+tracos(x,y);
+titulo("Gráfico");
+legendax("X");
+legenday("Y");
+fim();
+////////////////////////////
+
+
+</script>
+</html>

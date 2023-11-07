@@ -1,0 +1,14 @@
+var nx, ny;
+function (vz)
+{
+	var dy,dx,cor,zx,zy,i,j;
+	zx= mesq-(xesc*Xmin);		
+	zy=alt-(mb-yesc*Ymin);
+	dx = largura/(nx+1);
+	dy=altura/(ny+1);
+	for(i=0;i<nx;i++)
+	{for(j=0;j<ny;j++)
+  {  document.write(" <rect x=/"zx+dx*i/" y=/"zy-dy*j/" width=/"" ,dx, "/" height=/"" ,dy, "/" fill=/"" ,cor, "/"  stroke=/"" ,cor, "/"");
+  }
+	}
+}

@@ -1,0 +1,39 @@
+<html>
+<script>
+function exc ( e)
+{
+	if (e==0 || e==1)
+	{return 1;}
+	if (e>1)
+	{var k,x;
+	x=e;
+	k=e;	
+	while (k>=2)
+		{
+		x=x*(k-1);
+		k--;
+		}
+	return x;}
+}
+
+
+function matematica()
+{
+var i,res;
+res=0;
+n=20;
+for (i=0;i<n;i++)
+{	
+	res = res + Math.pow(10,i)/exc(i); 
+	
+	
+}
+return res;
+}
+
+console.log(matematica());
+</script>
+<body>
+
+</body>
+</html>

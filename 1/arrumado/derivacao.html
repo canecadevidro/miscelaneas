@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Derivação de ordem n</title>
+</head>
+<script>
+
+var h;
+
+function fact(f)
+{
+	if (f<2)
+	 {return 1;}
+	else {
+	 var ff = f, s=1;
+	  while (ff>1)
+	   {
+	    s=s*ff;
+	    ff=ff-1;
+	    }
+	  return s;
+	}
+}
+function b(x,y)
+	{return fact(x)/(fact(y)*fact(x-y));}
+
+
+function funcao(x)
+{return 	Math.exp(x);	}
+
+  h=0.01;
+function nderivada(x,n)
+{
+	var i,S;
+	S=0;
+	for (i=n;i>=0;i--)
+	 {  S =S+ Math.pow(-1,i)*b(n,i)*funcao(x+(n-i)*h);
+	}
+	return S/Math.pow(h,n);
+}
+
+function ST(x,xo)
+{
+var S,n,i;
+n=3;
+S=0;
+
+for (i=n;i>=0;i--)
+{
+S =S+   Math.pow(x-xo,i)*nderivada(xo,i)/fact(i);
+
+}
+
+return S;
+}
+
+
+</script>
+</html>

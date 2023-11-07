@@ -1,0 +1,33 @@
+<html>
+<script>
+function s (a ,b,c,d,e,f,i,u){
+var oi;
+function eq1(x,y,z)
+{ return x}
+function eq2(x,y,z)
+{ return y-1;}
+oi=0;
+function eq3 (x,y,z)
+{ return z-8;}
+
+while (a<=b)
+	{while (c<=d)
+		{while(e<=f)
+	{
+ if (Math.abs(eq3(a,c,e))<u && Math.abs(eq2(a,c,e))<u && Math.abs(eq1(a,c,e))<u)
+{console.log(a,c,e,'-----',eq1(a,c,e),eq2(a,c,e),eq3(a,c,e));
+	break;
+	oi=1;}
+	
+		e=e+i;}
+	if (oi=1)
+{break;}
+	c=c+i;}
+if (oi=1)
+{break;}
+a=a+i;}
+
+console.log("fim");
+}
+</script>
+</html>

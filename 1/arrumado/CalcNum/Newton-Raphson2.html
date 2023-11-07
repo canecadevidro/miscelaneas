@@ -1,0 +1,47 @@
+<html>
+<script>
+/*****************************
+
+   Encontrar as raízes de uma função
+   utilizando o método de Newton-Raphson.
+
+*********************************/	
+
+function ff(w)
+{
+	return Math.cos(w)*Math.cos(2*w+5);
+}
+
+function ffl(w)
+{
+	h=0.001
+return (ff(w+h)-ff(w))/h
+}
+
+var x=[], raizes=[];
+
+var j=1,b=5,k=0;
+
+function metodoNR()
+{
+for (a=0;a<=b;a=a+j)
+{
+x[0]=a;
+i=1;
+n=0;
+ while(Math.abs(ff(x[i-1]))>0.001 && n<100)
+      {
+	if (Math.abs(ffl(x[i-1]))<0.1 )
+	  {x[i] = x[i-1]+0.5;console.log(1); }
+	else 
+	  {x[i]= x[i-1]- (ff(x[i-1]))/(ffl(x[i-1])); console.log(2);}
+
+    console.log("n=",n);console.log("x=",x[i-1]); i++;n++;
+      }
+
+raizes[k]= x[i-1];k++;
+}}
+
+
+</script>
+</html>

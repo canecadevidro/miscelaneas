@@ -1,0 +1,35 @@
+<html>
+
+<script>
+b=10;
+
+a=0.001;
+zero = 0.0001;
+xo =b;
+function f(x)
+{
+	return Math.exp(6-x)-5*x*x*x-56*Math.log(x);
+}
+if( Math.sign(f(a)*f(b))<0){
+while (Math.abs( f(xo) )>=zero)
+{
+	if (Math.sign( f(a)*f(b) )<0)
+		{
+		console.log("xo= ",xo);
+		xo = (b+a)/2;
+		}
+
+	if ( Math.sign( f(a)*f(xo) )<0 )
+		{b = xo;}
+	
+	else if ( Math.sign( f(a)*f(xo) ) >0 )
+		{a = xo;}
+
+}
+	
+			}
+
+console.log(xo);
+
+</script>
+</html>

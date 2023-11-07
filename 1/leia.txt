@@ -1,0 +1,6 @@
+O "abc.html" é o que calcula as propriedades para a água;
+*********************************************************
+Exemplos:
+		O arquivo d.html faz o gráfico da equação
+			y = (0,02+x) * exp(-x/50)
+Vou criar um arquivo d_explicado.html com as descrições.
